@@ -103,11 +103,12 @@ class Aws:
     Arguments:
     - str_sensor_name: Nome do sensor ( str )
     - str_location_name: Nome da localização ( str )
+    - float_location_max_humidity: Umidade máxima suportada no solo da localização ( float )
     - float_measurement_value: Valor da medição ( float )
     - str_insert_date: Data de cadastro ( str )
    
     """
-    def send_message_by_alert_humidity(self, str_sensor_name: str = None, str_location_name: str = None, float_measurement_value: float = 0.00, str_insert_date: str = None)-> dict:
+    def send_message_by_alert_humidity(self, str_sensor_name: str = None, str_location_name: str = None, float_location_max_humidity: float = 0.00, float_measurement_value: float = 0.00, str_insert_date: str = None)-> dict:
 
         dict_return = {'status': True, 'dict_data': {}}
 
@@ -121,6 +122,9 @@ class Aws:
             if type(str_location_name) == type(None) or type(str_location_name) != str or str_location_name.strip() == '':
                 self.exception('Não foi possível concluir o processo pois o nome da localização não foi definida.')
 
+            if type(float_location_max_humidity) == type(None) or type(float_location_max_humidity) != float:
+                self.exception('Não foi possível concluir o processo pois o valor de umidade máxima suportada na localização não foi definido.')
+
             if type(float_measurement_value) == type(None) or type(float_measurement_value) != float:
                 self.exception('Não foi possível concluir o processo pois o valor da medição não foi definido.')
 
@@ -128,7 +132,18 @@ class Aws:
                 self.exception('Não foi possível concluir o processo pois a data de cadastro não foi definida.')
 
             dict_params_request['str_subject'] = f'Cadastro de medição'
-            dict_params_request['str_message'] = f'Uma medição foi cadastrada a partir do sensor "{str_sensor_name}" na localização "{str_location_name}" com o valor de {float_measurement_value} em {str_insert_date}.'
+            dict_params_request['str_message'] = f'''
+
+                Uma medição foi cadastrada a partir do sensor "{str_sensor_name}" na localização "{str_location_name}" com o valor de {float_measurement_value} em {str_insert_date}.
+
+                De acordo com a configuração dessa localização, a medição é superior ao máximo permitido ( {float_location_max_humidity} ), portanto, existem diversos riscos para região, tais como:
+
+                - Perda de coesão entre as partículas: A água em excesso age como lubrificante entre os grãos do solo, diminuindo a força de atrito que os mantém unidos. Isso enfraquece a estrutura do solo.
+                - Aumento do peso do solo: A água acumulada no solo aumenta sua massa, o que pressiona camadas inferiores e pode provocar escorregamento - especialmente em terrenos inclinados.
+                - Pressão intersticial (ou poro-pressão) elevada: Quando os poros do solo se enchem de água, a pressão interna cresce e empurra as partículas umas contra as outras, reduzindo a resistência ao cisalhamento (força que mantém o solo coeso).
+                - Saturação e liquefação: Em casos extremos, o solo pode entrar em um estado de liquefação, comportando-se como um líquido em vez de um sólido — situação extremamente perigosa.
+
+            '''
 
             str_url = f'{self.__get_url_by_alert_humidity()}'
             dict_return['dict_data'] = self.__execute_request(str_url, 'POST', dict_params_request)
