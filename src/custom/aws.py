@@ -43,24 +43,24 @@ class Aws:
         return dict_params_services['sns']
 
 
-    def __get_params_by_insert_measurement(self) -> dict:
+    def __get_params_by_alert_humidity(self) -> dict:
 
         dict_params_sns = self.__get_params_by_sns()
 
-        if 'insert-measurement' not in dict_params_sns or type(dict_params_sns['insert-measurement']) != dict or len(dict_params_sns['insert-measurement']) == 0:
-            self.exception('Não foi possível concluir o processo pois os parâmetros do serviço "sns > insert-measurement" não foram definidos.')
+        if 'alert-humidity' not in dict_params_sns or type(dict_params_sns['alert-humidity']) != dict or len(dict_params_sns['alert-humidity']) == 0:
+            self.exception('Não foi possível concluir o processo pois os parâmetros do serviço "sns > alert-humidity" não foram definidos.')
 
-        return dict_params_sns['insert-measurement']
+        return dict_params_sns['alert-humidity']
 
 
-    def __get_url_by_insert_measurement(self) -> str:
+    def __get_url_by_alert_humidity(self) -> str:
 
-        dict_params_insert_measurement = self.__get_params_by_insert_measurement()
+        dict_params_alert_humidity = self.__get_params_by_alert_humidity()
 
-        if 'url' not in dict_params_insert_measurement or dict_params_insert_measurement['url'].strip() == '':
-            self.exception('Não foi possível concluir o processo pois a url do serviço "sns > insert-measurement" não foi definida.')
+        if 'url' not in dict_params_alert_humidity or dict_params_alert_humidity['url'].strip() == '':
+            self.exception('Não foi possível concluir o processo pois a url do serviço "sns > alert-humidity" não foi definida.')
 
-        return dict_params_insert_measurement['url'].strip()
+        return dict_params_alert_humidity['url'].strip()
 
     
 
@@ -107,7 +107,7 @@ class Aws:
     - str_insert_date: Data de cadastro ( str )
    
     """
-    def send_message_by_insert_measurement(self, str_sensor_name: str = None, str_location_name: str = None, float_measurement_value: float = 0.00, str_insert_date: str = None)-> dict:
+    def send_message_by_alert_humidity(self, str_sensor_name: str = None, str_location_name: str = None, float_measurement_value: float = 0.00, str_insert_date: str = None)-> dict:
 
         dict_return = {'status': True, 'dict_data': {}}
 
@@ -130,7 +130,7 @@ class Aws:
             dict_params_request['str_subject'] = f'Cadastro de medição'
             dict_params_request['str_message'] = f'Uma medição foi cadastrada a partir do sensor "{str_sensor_name}" na localização "{str_location_name}" com o valor de {float_measurement_value} em {str_insert_date}.'
 
-            str_url = f'{self.__get_url_by_insert_measurement()}'
+            str_url = f'{self.__get_url_by_alert_humidity()}'
             dict_return['dict_data'] = self.__execute_request(str_url, 'POST', dict_params_request)
 
         except Exception as error:

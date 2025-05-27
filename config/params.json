@@ -9,8 +9,8 @@
     "aws": {
         "services": {
             "sns": {
-                "insert-measurement": {
-                    "url": ""
+                "alert-humidity": {
+                    "url": "https://y2h4mx0jb7.execute-api.us-east-1.amazonaws.com/f7gs_alert-humidity"
                 }
             }
         }
