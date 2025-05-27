@@ -4,12 +4,7 @@ from custom.helper import Helper
 class F7GsSensor(Database):
 
     # Constantes referentes aos tipos de sensores
-    TYPE_TEMPERATURE = 1
-    TYPE_HUMIDITY = 2
-    TYPE_LIGHT = 3
-    TYPE_RADIATION = 4
-    TYPE_SALINITY = 5
-    TYPE_PH = 6
+    TYPE_HUMIDITY = 1
 
     def __init__(self, object_database = None):
 
@@ -37,28 +32,6 @@ class F7GsSensor(Database):
 
     @staticmethod
     def get_type_options(int_code: int = 0) -> list:
-
-        """dict_types = [
-            {
-                'code': F7GsSensor.TYPE_TEMPERATURE,
-                'title': 'Sensor de Temperatura do solo'
-            },{
-                'code': F7GsSensor.TYPE_HUMIDITY,
-                'title': 'Sensor de Umidade do solo'
-            },{
-                'code': F7GsSensor.TYPE_LIGHT,
-                'title': 'Sensor de luminosidade'
-            },{
-                'code': F7GsSensor.TYPE_RADIATION,
-                'title': 'Sensor de radiação'
-            },{
-                'code': F7GsSensor.TYPE_SALINITY,
-                'title': 'Sensor de salinidade do solo'
-            },{
-                'code': F7GsSensor.TYPE_PH,
-                'title': 'Sensor de pH do solo'
-            }
-        ]"""
 
         dict_types = [
             {
