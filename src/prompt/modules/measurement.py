@@ -528,6 +528,9 @@ def action_insert():
 
     print('Registro cadastrado com sucesso.')
 
+    # <PENDENTE>
+    # Análise do valor armazenado VERSUS o valor máximo configurado na localização
+
     require_reload()
 
 
