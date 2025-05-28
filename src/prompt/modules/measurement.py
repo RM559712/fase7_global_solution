@@ -11,6 +11,7 @@ import prompt.modules.sensor as ModuleSensor
 import prompt.modules.location as ModuleLocation
 from custom.aws import Aws
 from custom.helper import Helper
+from custom.alert import Alert
 from models.f7_gs_measurement import F7GsMeasurement
 
 """
@@ -528,8 +529,63 @@ def action_insert():
 
     print('Registro cadastrado com sucesso.')
 
-    # <PENDENTE>
-    # Análise do valor armazenado VERSUS o valor máximo configurado na localização
+    dict_data_sensor = get_data_sensor_by_id(int_msm_sns_id)
+    dict_data_location = get_data_location_by_id(int_msm_loc_id)
+
+    print('')
+
+    input(f'Pressione <enter> para continuar...')
+
+    # -------
+    # Etapa 3
+    # -------
+
+    Main.init_step()
+
+    show_head_module()
+
+    input(f'A partir das medições cadastradas, será verificado se a localização deverá ter um alerta enviado. Pressione <enter> para continuar...')
+
+    print('')
+
+    dict_validate_alert = {'dict_filters_location': {}, 'dict_measurement': {}}
+
+    dict_validate_alert['dict_filters_location']['float_humidity_max'] = dict_data_location['LCO_HUMIDITY_MAX']
+
+    dict_validate_alert['dict_measurement']['int_sensor_type'] = dict_data_sensor['SNS_TYPE']
+    dict_validate_alert['dict_measurement']['float_value'] = float_msm_value
+
+    object_alert = Alert()
+
+    dict_return_validate_alert = object_alert.validate_alert_by_location(dict_validate_alert)
+    if dict_return_validate_alert['status'] == False:
+        raise Exception(dict_return_validate_alert['message'])
+
+    # Análises a partir de configurações da plantação
+    if dict_return_validate_alert['dict_data']['dict_analysis_alert']['status'] == False:
+        raise Exception(str(dict_return_validate_alert['dict_data']['dict_analysis_alert']['message']))
+
+    object_aws = Aws()
+    dict_send_message_by_alert_humidity = object_aws.send_message_by_alert_humidity(
+
+        str_sensor_name = dict_data_sensor['SNS_NAME'], 
+        str_location_name = dict_data_location['LOC_NAME'], 
+        float_location_max_humidity = dict_data_location['LCO_HUMIDITY_MAX'], 
+        float_measurement_value = dict_data['MSM_VALUE'], 
+        str_insert_date = Helper.convert_date_to_pt_br(dict_data['MSM_INSERT_DATE'])
+
+    )
+
+    if dict_send_message_by_alert_humidity['status'] == False:
+        raise Exception(dict_send_message_by_alert_humidity['message'])
+
+    print('Alerta enviado com sucesso.')
+
+
+
+    # Demais outros possíveis processos automatizados podem ser adicionadis neste espaço...
+
+
 
     require_reload()
 

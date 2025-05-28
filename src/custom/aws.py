@@ -134,9 +134,9 @@ class Aws:
             dict_params_request['str_subject'] = f'Alerta de possível instabilidade de solo'
             dict_params_request['str_message'] = f'''
 
-                Uma medição foi cadastrada a partir do sensor "{str_sensor_name}" na localização "{str_location_name}" com o valor de {float_measurement_value} em {str_insert_date}.
+                Uma medição foi cadastrada a partir do sensor "{str_sensor_name}" na localização "{str_location_name}" com o valor de {float_measurement_value} mm em {str_insert_date}.
 
-                De acordo com a configuração dessa localização, a medição é superior ao máximo permitido ( {float_location_max_humidity} ), podendo ocasionar as possíveis situações:
+                De acordo com a configuração dessa localização, a medição é superior ao máximo permitido ( {float_location_max_humidity} mm ), podendo ocasionar as possíveis situações:
 
                 - Perda de coesão entre as partículas: A água em excesso age como lubrificante entre os grãos do solo, diminuindo a força de atrito que os mantém unidos. Isso enfraquece a estrutura do solo.
                 - Aumento do peso do solo: A água acumulada no solo aumenta sua massa, o que pressiona camadas inferiores e pode provocar escorregamento - especialmente em terrenos inclinados.
