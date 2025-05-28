@@ -9,6 +9,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '.
 import prompt.main as Main
 from custom.helper import Helper
 from models.f7_gs_location import F7GsLocation
+from models.f7_gs_location_config import F7GsLocationConfig
 
 """
 Método responsável pela exibição do cabeçalho do módulo
@@ -252,6 +253,180 @@ def validate_name(dict_data: dict = {}) -> str:
 
 
 """
+Método responsável pela formatação de visualização da latitude do módulo "Localizações"
+
+Arguments:
+- dict_data: Dict contendo os dados conforme retorno do banco de dados ( dictionary )
+
+Return: str
+"""
+def format_data_view_latitude(dict_data: dict = {}) -> str:
+
+    str_return = 'Latitude: '
+    str_return += f'{dict_data['LCO_LATITUDE']}' if 'LCO_LATITUDE' in dict_data and type(dict_data['LCO_LATITUDE']) != None and Helper.is_float(dict_data['LCO_LATITUDE']) == True else 'N/I'
+
+    return str_return
+
+
+"""
+Método responsável pela validação do parâmetro "Latitude"
+
+Arguments:
+- dict_data: Dict contendo os dados conforme retorno do banco de dados ( dictionary )
+
+Return: str
+"""
+def validate_latitude(dict_data: dict = {}) -> float:
+
+    bool_is_update = ('LOC_ID' in dict_data and type(dict_data['LOC_ID']) == int)
+
+    str_label = f'Importante: Caso deseje manter a latitude atual ( abaixo ), basta ignorar o preenchimento. Caso queira apagar o valor, digite "none".\n{format_data_view_latitude(dict_data)}\n' if bool_is_update == True else ''
+    str_label += f'Informe a latitude da localização em formato numérico ( ex.: 123, 123.45 ou 123,45 ): '
+    float_return = input(f'{str_label}')
+
+    while True:
+
+        try:
+
+            if float_return.strip() != '' and float_return.strip().lower() != 'none':
+
+                if ',' in float_return:
+                    float_return = float_return.replace(',', '.')
+
+                if Helper.is_float(float_return) == False and Helper.is_int(float_return) == False:
+                    raise Exception('O conteúdo informado deve ser numérico ( ex.: 123, 123.45 ou 123,45 ).')
+
+            break
+
+        except Exception as error:
+
+            print(f'{error} Tente novamente: ', end = '')
+            float_return = input()
+
+    float_value = None
+    if float_return.strip() != '':
+        float_value = float(float_return) if float_return.strip().lower() != 'none' else ''
+
+    return float_value
+
+
+"""
+Método responsável pela formatação de visualização da longitude do módulo "Plantações"
+
+Arguments:
+- dict_data: Dict contendo os dados conforme retorno do banco de dados ( dictionary )
+
+Return: str
+"""
+def format_data_view_longitude(dict_data: dict = {}) -> str:
+
+    str_return = 'Longitude: '
+    str_return += f'{dict_data['LCO_LONGITUDE']}' if 'LCO_LONGITUDE' in dict_data and type(dict_data['LCO_LONGITUDE']) != None and Helper.is_float(dict_data['LCO_LONGITUDE']) == True else 'N/I'
+
+    return str_return
+
+
+"""
+Método responsável pela validação do parâmetro "Longitude"
+
+Arguments:
+- dict_data: Dict contendo os dados conforme retorno do banco de dados ( dictionary )
+
+Return: str
+"""
+def validate_longitude(dict_data: dict = {}) -> float:
+
+    bool_is_update = ('LOC_ID' in dict_data and type(dict_data['LOC_ID']) == int)
+
+    str_label = f'Importante: Caso deseje manter a longitude atual ( abaixo ), basta ignorar o preenchimento. Caso queira apagar o valor, digite "none".\n{format_data_view_longitude(dict_data)}\n' if bool_is_update == True else ''
+    str_label += f'Informe a longitude da localização em formato numérico ( ex.: 123, 123.45 ou 123,45 ): '
+    float_return = input(f'{str_label}')
+
+    while True:
+
+        try:
+
+            if float_return.strip() != '' and float_return.strip().lower() != 'none':
+
+                if ',' in float_return:
+                    float_return = float_return.replace(',', '.')
+
+                if Helper.is_float(float_return) == False and Helper.is_int(float_return) == False:
+                    raise Exception('O conteúdo informado deve ser numérico ( ex.: 123, 123.45 ou 123,45 ).')
+
+            break
+
+        except Exception as error:
+
+            print(f'{error} Tente novamente: ', end = '')
+            float_return = input()
+
+    float_value = None
+    if float_return.strip() != '':
+        float_value = float(float_return) if float_return.strip().lower() != 'none' else ''
+
+    return float_value
+
+
+"""
+Método responsável pela formatação de visualização da umidade máxima para o solo do módulo "Localizações"
+
+Arguments:
+- dict_data: Dict contendo os dados conforme retorno do banco de dados ( dictionary )
+
+Return: str
+"""
+def format_data_view_humidity_max(dict_data: dict = {}) -> str:
+
+    str_return = 'umidade máxima para o solo: '
+    str_return += f'{dict_data['LCO_HUMIDITY_MAX']} mm' if 'LCO_HUMIDITY_MAX' in dict_data and type(dict_data['LCO_HUMIDITY_MAX']) != None and Helper.is_float(dict_data['LCO_HUMIDITY_MAX']) == True else 'N/I'
+
+    return str_return
+
+
+"""
+Método responsável pela validação do parâmetro "umidade máxima para o solo"
+
+Arguments:
+- dict_data: Dict contendo os dados conforme retorno do banco de dados ( dictionary )
+
+Return: str
+"""
+def validate_humidity_max(dict_data: dict = {}) -> float:
+
+    bool_is_update = ('LOC_ID' in dict_data and type(dict_data['LOC_ID']) == int)
+
+    str_label = f'Importante: Caso deseje manter a umidade máxima para o solo atual ( abaixo ), basta ignorar o preenchimento. Caso queira apagar o valor, digite "none".\n{format_data_view_humidity_max(dict_data)}\n' if bool_is_update == True else ''
+    str_label += f'Informe a umidade máxima para o solo em formato numérico ( ex.: 123, 123.45 ou 123,45 ): '
+    float_return = input(f'{str_label}')
+
+    while True:
+
+        try:
+
+            if float_return.strip() != '' and float_return.strip().lower() != 'none':
+
+                if ',' in float_return:
+                    float_return = float_return.replace(',', '.')
+
+                if Helper.is_float(float_return) == False and Helper.is_int(float_return) == False:
+                    raise Exception('O conteúdo informado deve ser numérico ( ex.: 123, 123.45 ou 123,45 ).')
+
+            break
+
+        except Exception as error:
+
+            print(f'{error} Tente novamente: ', end = '')
+            float_return = input()
+
+    float_value = None
+    if float_return.strip() != '':
+        float_value = float(float_return) if float_return.strip().lower() != 'none' else ''
+
+    return float_value
+
+
+"""
 Método responsável pela formatação de visualização da data de cadastro do módulo "Localização"
 
 Arguments:
@@ -303,6 +478,9 @@ def format_data_view(dict_data: dict = {}, bool_show_id: bool = True, bool_show_
         str_return = ''
         str_return += f'- {format_data_view_id(dict_data)} \n' if bool_show_id == True else ''
         str_return += f'- {format_data_view_name(dict_data)} \n'
+        str_return += f'- {format_data_view_latitude(dict_data)} \n'
+        str_return += f'- {format_data_view_longitude(dict_data)} \n'
+        str_return += f'- {format_data_view_humidity_max(dict_data)} \n'
         str_return += f'- {format_data_view_insert_date(dict_data)} \n' if bool_show_insert_date == True else ''
         str_return += f'- {format_data_view_update_date(dict_data)} \n' if bool_show_update_date == True else ''
 
@@ -322,8 +500,11 @@ def action_list():
 
     object_f7gs_location = F7GsLocation()
 
-    object_f7gs_location.set_select(['LOC.*'])
+    object_f7gs_location.set_select(['LOC.*', 'LCO.*'])
     object_f7gs_location.set_table('F7_GS_LOCATION LOC')
+    object_f7gs_location.set_join([
+        {'str_type_join': 'INNER JOIN', 'str_table': 'F7_GS_LOCATION_CONFIG LCO', 'str_where': 'LCO.LCO_LOC_ID = LOC.LOC_ID'},
+    ])
     object_f7gs_location.set_where([F7GsLocation.get_params_to_active_data()])
     object_f7gs_location.set_order([{'str_column': 'LOC_ID', 'str_type_order': 'ASC'}])
     list_data = object_f7gs_location.get_data().get_list()
@@ -342,8 +523,11 @@ def get_data_by_id(int_loc_id: int = 0) -> dict:
 
     object_f7gs_location = F7GsLocation()
 
-    object_f7gs_location.set_select(['LOC.*'])
+    object_f7gs_location.set_select(['LOC.*', 'LCO.*'])
     object_f7gs_location.set_table('F7_GS_LOCATION LOC')
+    object_f7gs_location.set_join([
+        {'str_type_join': 'INNER JOIN', 'str_table': 'F7_GS_LOCATION_CONFIG LCO', 'str_where': 'LCO.LCO_LOC_ID = LOC.LOC_ID'},
+    ])
     object_f7gs_location.set_where([
 
         {'str_column': 'LOC_ID', 'str_type_where': '=', 'value': int_loc_id},
@@ -357,6 +541,28 @@ def get_data_by_id(int_loc_id: int = 0) -> dict:
         raise Exception(f'Nenhum registro foi localizado com o ID {int_loc_id}.')
 
     return object_f7gs_location
+
+
+"""
+Método responsável por executar a ação de retorno de dados de configuração uma determinada localização
+"""
+def get_data_config_location_by_id(int_loc_id: int = 0) -> dict:
+
+    object_f7gs_location_config = F7GsLocationConfig()
+
+    object_f7gs_location_config.set_where([
+
+        {'str_column': 'LCO_LOC_ID', 'str_type_where': '=', 'value': int_loc_id},
+        F7GsLocationConfig.get_params_to_active_data()
+
+    ])
+
+    dict_data = object_f7gs_location_config.get_data().get_one()
+
+    if type(dict_data) == type(None):
+        raise Exception(f'Nenhum registro de configuração de localização foi localizado com o ID {int_loc_id}.')
+
+    return object_f7gs_location_config
 
 
 # ... Demais parâmetros...
@@ -376,6 +582,35 @@ def action_insert():
 
     str_loc_name = validate_name()
 
+    # -------
+    # Etapa 2
+    # -------
+
+    Main.init_step()
+
+    show_head_module()
+
+    print('Os próximos parâmetros fazem parte da localização geográfica. O preenchimento não é obrigatório.')
+    input(f'\nPressione <enter> para continuar...')
+
+    # -------
+    # Etapa 3
+    # -------
+
+    Main.init_step()
+
+    show_head_module()
+
+    float_lco_latitude = validate_latitude()
+
+    print('')
+
+    float_lco_longitude = validate_longitude()
+
+    print('')
+
+    float_lco_humidity_max = validate_humidity_max()
+
     Main.loading('Salvando dados, por favor aguarde...')
 
     # -------
@@ -394,6 +629,26 @@ def action_insert():
     object_f7gs_location.insert(dict_data)
 
     int_loc_id = object_f7gs_location.get_last_id()
+
+    # --------------------------------------------------
+    # Processo de cadastro dos parâmetros de localização
+    # --------------------------------------------------
+
+    dict_data_config_location = {}
+
+    dict_data_config_location['LCO_LOC_ID'] = int_loc_id
+
+    if type(float_lco_latitude) != type(None):
+        dict_data_config_location['LCO_LATITUDE'] = float_lco_latitude
+
+    if type(float_lco_longitude) != type(None):
+        dict_data_config_location['LCO_LONGITUDE'] = float_lco_longitude
+
+    if type(float_lco_humidity_max) != type(None):
+        dict_data_config_location['LCO_HUMIDITY_MAX'] = float_lco_humidity_max
+
+    object_f7gs_location_config = F7GsLocationConfig()
+    object_f7gs_location_config.insert(dict_data_config_location)
 
     # Retorno de dados após o cadastro
     object_f7gs_location = get_data_by_id(int_loc_id)
@@ -452,10 +707,39 @@ def action_update():
 
     str_loc_name = validate_name(dict_data)
 
+    # -------
+    # Etapa 4
+    # -------
+
+    Main.init_step()
+
+    show_head_module()
+
+    print('Os próximos parâmetros fazem parte da localização geográfica. O preenchimento não é obrigatório.')
+    input(f'\nPressione <enter> para continuar...')
+
+    # -------
+    # Etapa 5
+    # -------
+
+    Main.init_step()
+
+    show_head_module()
+
+    float_lco_latitude = validate_latitude(dict_data)
+
+    print('')
+
+    float_lco_longitude = validate_longitude(dict_data)
+
+    print('')
+
+    float_lco_humidity_max = validate_humidity_max(dict_data)
+
     Main.loading('Salvando dados, por favor aguarde...')
 
     # -------
-    # Etapa 4
+    # Etapa 6
     # -------
 
     Main.init_step()
@@ -466,6 +750,25 @@ def action_update():
         dict_data['LOC_NAME'] = str_loc_name
 
     object_f7gs_location.update(dict_data)
+
+    # -----------------------------------------------------
+    # Processo de atualização dos parâmetros de localização
+    # -----------------------------------------------------
+
+    object_f7gs_location_config = get_data_config_location_by_id(int_loc_id)
+    dict_data_config_location = object_f7gs_location_config.get_one()
+
+    if type(float_lco_latitude) != type(None):
+        dict_data_config_location['LCO_LATITUDE'] = float_lco_latitude
+
+    if type(float_lco_longitude) != type(None):
+        dict_data_config_location['LCO_LONGITUDE'] = float_lco_longitude
+
+    if type(float_lco_humidity_max) != type(None):
+        dict_data_config_location['LCO_HUMIDITY_MAX'] = float_lco_humidity_max
+
+    if type(dict_data_config_location) != type(None):
+        object_f7gs_location_config.update(dict_data_config_location)
 
     # Retorno de dados após as atualizações
     object_f7gs_location = get_data_by_id(int_loc_id)
@@ -507,6 +810,17 @@ def action_delete():
     dict_data['LOC_STATUS'] = F7GsLocation.STATUS_DELETED
 
     object_f7gs_location.update(dict_data)
+
+    # --------------------------------------------------
+    # Processo de exclusão dos parâmetros de localização
+    # --------------------------------------------------
+
+    object_f7gs_location_config = get_data_config_location_by_id(int_loc_id)
+    dict_data_config_location = object_f7gs_location_config.get_one()
+
+    dict_data_config_location['LCO_STATUS'] = F7GsLocationConfig.STATUS_DELETED
+
+    object_f7gs_location_config.update(dict_data_config_location)
 
     print('Registro excluído com sucesso.')
 
