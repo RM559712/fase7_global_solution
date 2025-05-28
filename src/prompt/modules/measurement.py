@@ -13,6 +13,7 @@ from custom.aws import Aws
 from custom.helper import Helper
 from custom.alert import Alert
 from models.f7_gs_measurement import F7GsMeasurement
+from models.f7_gs_sensor import F7GsSensor
 
 """
 Método responsável pela exibição do cabeçalho do módulo
@@ -565,21 +566,25 @@ def action_insert():
     if dict_return_validate_alert['dict_data']['dict_analysis_alert']['status'] == False:
         raise Exception(str(dict_return_validate_alert['dict_data']['dict_analysis_alert']['message']))
 
-    object_aws = Aws()
-    dict_send_message_by_alert_humidity = object_aws.send_message_by_alert_humidity(
+    match dict_data_sensor['SNS_TYPE']:
 
-        str_sensor_name = dict_data_sensor['SNS_NAME'], 
-        str_location_name = dict_data_location['LOC_NAME'], 
-        float_location_max_humidity = dict_data_location['LCO_HUMIDITY_MAX'], 
-        float_measurement_value = dict_data['MSM_VALUE'], 
-        str_insert_date = Helper.convert_date_to_pt_br(dict_data['MSM_INSERT_DATE'])
+        case F7GsSensor.TYPE_HUMIDITY:
 
-    )
+            object_aws = Aws()
+            dict_send_message_by_alert_humidity = object_aws.send_message_by_alert_humidity(
 
-    if dict_send_message_by_alert_humidity['status'] == False:
-        raise Exception(dict_send_message_by_alert_humidity['message'])
+                str_sensor_name = dict_data_sensor['SNS_NAME'], 
+                str_location_name = dict_data_location['LOC_NAME'], 
+                float_location_max_humidity = dict_data_location['LCO_HUMIDITY_MAX'], 
+                float_measurement_value = dict_data['MSM_VALUE'], 
+                str_insert_date = Helper.convert_date_to_pt_br(dict_data['MSM_INSERT_DATE'])
 
-    print('Alerta enviado com sucesso.')
+            )
+
+            if dict_send_message_by_alert_humidity['status'] == False:
+                raise Exception(dict_send_message_by_alert_humidity['message'])
+
+            print('Alerta enviado com sucesso.')
 
 
 

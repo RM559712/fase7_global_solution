@@ -196,8 +196,8 @@ def action_graphic_measurement():
     Pyplot.figure(figsize = (8, 6))
     Seaborn.scatterplot(x = y_test, y = y_pred)
     Pyplot.plot([list_y.min(), list_y.max()], [list_y.min(), list_y.max()], '--r', label = 'Ideal')
-    Pyplot.xlabel('Valores reais (em ml)')
-    Pyplot.ylabel('Valores previstos (em ml)')
+    Pyplot.xlabel('Valores reais (em %)')
+    Pyplot.ylabel('Valores previstos (em %)')
     Pyplot.title(f'Valores reais x Valores previstos - {dict_data_location['LOC_NAME']}')
     Pyplot.legend()
 

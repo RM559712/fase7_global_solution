@@ -378,14 +378,14 @@ Return: str
 """
 def format_data_view_humidity_max(dict_data: dict = {}) -> str:
 
-    str_return = 'umidade máxima para o solo: '
-    str_return += f'{dict_data['LCO_HUMIDITY_MAX']} mm' if 'LCO_HUMIDITY_MAX' in dict_data and type(dict_data['LCO_HUMIDITY_MAX']) != None and Helper.is_float(dict_data['LCO_HUMIDITY_MAX']) == True else 'N/I'
+    str_return = 'Umidade máxima para o solo: '
+    str_return += f'{dict_data['LCO_HUMIDITY_MAX']}%' if 'LCO_HUMIDITY_MAX' in dict_data and type(dict_data['LCO_HUMIDITY_MAX']) != None and Helper.is_float(dict_data['LCO_HUMIDITY_MAX']) == True else 'N/I'
 
     return str_return
 
 
 """
-Método responsável pela validação do parâmetro "umidade máxima para o solo"
+Método responsável pela validação do parâmetro "Umidade máxima para o solo"
 
 Arguments:
 - dict_data: Dict contendo os dados conforme retorno do banco de dados ( dictionary )
