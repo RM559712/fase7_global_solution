@@ -58,10 +58,10 @@ class Alert:
                                 self.exception('A localização não possui um limite de umidade para o solo configurada, portanto, a validação para envio de alerta não será executada.')
                             
                             if float_value < float_humidity_max:
-                                self.exception(f'De acordo com a medição informada ( {float_value} mm ), não será necessário enviar um alerta pois a umidade para o solo está abaixo do limite máximo ( {float_humidity_max} mm ).')
+                                self.exception(f'De acordo com a medição informada ( {float_value} ml ), não será necessário enviar um alerta pois a umidade para o solo está abaixo do limite máximo ( {float_humidity_max} ml ).')
                             
                             if float_value == float_humidity_max:
-                                self.exception(f'De acordo com a medição informada ( {float_value} mm ), não será necessário enviar um alerta pois a umidade para o solo está no limite máximo permitido ( {float_humidity_max} mm ).')
+                                self.exception(f'De acordo com a medição informada ( {float_value} ml ), não será necessário enviar um alerta pois a umidade para o solo está no limite máximo permitido ( {float_humidity_max} ml ).')
 
                         case _:
                             self.exception(f'Não foi possível concluir o processo pois o tipo de sensor informado ( {dict_sensor['title']} ) não atende aos requisitos para envio de alerta.')

@@ -113,6 +113,10 @@ def get_system_menu_options() -> list:
             'action': ModuleMeasurement.action_main
         },{
             'code': 4,
+            'title': 'Gráficos',
+            'action': ModuleReport.action_main
+        },{
+            'code': 5,
             'title': 'Sair',
             'action': action_exit
         }
@@ -225,6 +229,12 @@ import prompt.modules.sensor as ModuleSensor
 # ---------------------------------------------------------------------------------------------------------------
 
 import prompt.modules.measurement as ModuleMeasurement
+
+# ---------------------------------------------------------------------------------------------------------------
+# Métodos referentes a opção "Gráficos"
+# ---------------------------------------------------------------------------------------------------------------
+
+import prompt.modules.report as ModuleReport
 
 # ... Demais módulos...
 
