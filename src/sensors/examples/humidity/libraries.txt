@@ -2,6 +2,6 @@
 # See https://docs.wokwi.com/guides/libraries
 
 # Automatically added based on includes:
-LiquidCrystal
-
 LiquidCrystal I2C
+
+LiquidCrystal_I2C_UTF8

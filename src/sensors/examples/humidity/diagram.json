@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Rodrigo Mazuco",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -9.6, "left": -129.56, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 8.3, "left": -249.8, "attrs": {} },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": 25.6,
+      "left": 53.6,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "pot1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "esp:22", "lcd1:SCL", "green", [ "h28.8", "v48", "h-9.6" ] ],
+    [ "esp:21", "lcd1:SDA", "green", [ "h19.2", "v9.6" ] ],
+    [ "esp:GND.2", "lcd1:GND", "black", [ "v0", "h38.4", "v38.4" ] ],
+    [ "pot1:VCC", "esp:3V3", "red", [ "v19.2", "h47.2", "v-76.8" ] ],
+    [ "lcd1:VCC", "esp:3V3", "red", [ "h-38.4", "v-86.3", "h-144.15" ] ],
+    [ "pot1:SIG", "esp:34", "green", [ "v28.8", "h66.8", "v-48" ] ]
+  ],
+  "dependencies": {}
+}
