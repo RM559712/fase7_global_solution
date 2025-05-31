@@ -29,7 +29,25 @@ Grupo de número <b>4</b> formado pelos integrantes mencionados abaixo.
 
 <b>Referência</b>: https://on.fiap.com.br/mod/assign/view.php?id=491867&c=13085
 
-<PENDENTE>
+### Problema
+
+Nos últimos anos, o Brasil passou por tragédias após deslizamentos em encostas, causados por conta do solo estar excessivamente encharcado. Sabemos que é muito difícil evitarmos esses acidentes pois a natureza é incontrolável e, por conta de ações do ser humano, esses eventos estão se tornando cada vez mais imprevisíveis.
+
+Não precisamos voltar muito no tempo para nos lembrarmos dos eventos ocorridos na cidade de São Sebastião, litoral do estado de São Paulo, em fevereiro de 2023. Por conta da quantidade excessiva de chuvas — acumulando, em um único dia, a quantidade total esperada para todo o mês —, a cidade foi afetada por diversos alagamentos e deslizamentos nas encostas da região. Infelizmente, 64 moradores da Vila Sahy, bairro mais afetado pelos deslizamentos, perderam a vida, pois não tiveram tempo suficiente para abandonar a região em segurança.
+
+As imagens abaixo, retiradas do site https://disasterscharter.org/activations/landslide-in-brazil-activation-803-, demonstram como as regiões foram afetadas com os deslizamentos.
+
+![São Sebastião - Vila Sahy](https://github.com/RM559712/fase7_cap1/blob/main/assets/images/SaoSebastiao_BarraSahy-1.webp)
+![São Sebastião - Vila Sahy](https://github.com/RM559712/fase7_cap1/blob/main/assets/images/SaoSebastiao_BarraSahy-2.webp)
+![São Sebastião - Vila Sahy](https://github.com/RM559712/fase7_cap1/blob/main/assets/images/SaoSebastiao_BarraSahy-3.webp)
+
+
+
+
+
+### Projeto
+
+
 
 ## 📁 Estrutura de pastas
 
