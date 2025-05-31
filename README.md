@@ -37,9 +37,9 @@ Não precisamos voltar muito no tempo para nos lembrarmos dos eventos ocorridos 
 
 As imagens abaixo, retiradas do site https://disasterscharter.org/activations/landslide-in-brazil-activation-803-, demonstram como as regiões foram afetadas com os deslizamentos.
 
-![São Sebastião - Vila Sahy](https://github.com/RM559712/fase7_cap1/blob/main/assets/images/SaoSebastiao_BarraSahy-1.webp)
-![São Sebastião - Vila Sahy](https://github.com/RM559712/fase7_cap1/blob/main/assets/images/SaoSebastiao_BarraSahy-2.webp)
-![São Sebastião - Vila Sahy](https://github.com/RM559712/fase7_cap1/blob/main/assets/images/SaoSebastiao_BarraSahy-3.webp)
+![São Sebastião - Vila Sahy](https://github.com/RM559712/fase7_global_solution/blob/main/assets/images/SaoSebastiao_BarraSahy-1.webp)
+![São Sebastião - Vila Sahy](https://github.com/RM559712/fase7_global_solution/blob/main/assets/images/SaoSebastiao_BarraSahy-2.webp)
+![São Sebastião - Vila Sahy](https://github.com/RM559712/fase7_global_solution/blob/main/assets/images/SaoSebastiao_BarraSahy-3.webp)
 
 
 
