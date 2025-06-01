@@ -79,7 +79,7 @@ Algumas informações sobre as funcionalidades do projeto:
 
 O componente responsável pelo envio do alerta utilizará o serviço da AWS. Para fins de validação, o método responsável pela ação acima pode ser visualizado clicando [aqui](https://github.com/RM559712/fase7_global_solution/tree/main/src/aws/lambda).
 
-A execução de todo o processo mencionado acima, em um cenário de teste, pode ser visualizada em um vídeo clicando [aqui](<PENDENTE>).
+A execução de todo o processo mencionado acima, em um cenário de teste, pode ser visualizada em um vídeo clicando [aqui](https://youtu.be/pi3SEKsDKsc).
 
 ## 📁 Estrutura de pastas
 
