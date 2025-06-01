@@ -56,9 +56,9 @@ As imagens abaixo, retiradas do site https://disasterscharter.org/activations/la
 
 #### Outros relatos
 
-Infelizmente, muitos outros episódios causaram tragédias em diversas regiões do Brasil, como em Angra dos Reis, localizado no estado do Rio de Janeiro, em abril de 2022.
+Infelizmente, muitos outros episódios causaram tragédias em diversas regiões do Brasil, como em Angra dos Reis, no estado do Rio de Janeiro, em abril de 2022.
 
-Por se tratarem de regiões sujeitas a esse tipo de evento, será que, se essas famílias tivessem acesso a um sistema que pudesse alertá-las sempre que a área estivesse chegando ao seu limite e correndo risco de deslizamentos, elas poderiam ter sido salvas? A resposta é: sim, acreditamos que isso seria possível. Para isso, um sistema simples e de baixo custo seria suficiente para ajudar não só a salvar todas essas vidas — o ponto principal da questão —, mas também para auxiliar as equipes de resgate e contenção a tomarem decisões que talvez evitassem os danos materiais causados à região.
+Por se tratarem de regiões sujeitas a esse tipo de evento, será que, se essas famílias tivessem acesso a um sistema capaz de alertá-las sempre que a área estivesse se aproximando do seu limite e correndo risco de deslizamentos, elas poderiam ter sido salvas? A resposta é: sim, acreditamos que isso seria possível. Para tanto, um sistema simples e de baixo custo seria suficiente para ajudar não apenas a salvar todas essas vidas — o ponto principal da questão —, mas também para auxiliar as equipes de resgate e contenção a tomarem decisões que, talvez, evitassem os danos materiais causados à região.
 
 ### Projeto
 
