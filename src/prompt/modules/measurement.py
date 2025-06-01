@@ -575,6 +575,8 @@ def action_insert():
 
                 str_sensor_name = dict_data_sensor['SNS_NAME'], 
                 str_location_name = dict_data_location['LOC_NAME'], 
+                str_latitude = dict_data_location['LCO_LATITUDE'],
+                str_longitude = dict_data_location['LCO_LONGITUDE'],
                 float_location_max_humidity = dict_data_location['LCO_HUMIDITY_MAX'], 
                 float_measurement_value = dict_data['MSM_VALUE'], 
                 str_insert_date = Helper.convert_date_to_pt_br(dict_data['MSM_INSERT_DATE'])

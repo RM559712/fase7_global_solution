@@ -103,12 +103,14 @@ class Aws:
     Arguments:
     - str_sensor_name: Nome do sensor ( str )
     - str_location_name: Nome da localização ( str )
+    - str_latitude: Latitude da localização ( str )
+    - str_longitude: Longitude da localização ( str )
     - float_location_max_humidity: Umidade máxima suportada no solo da localização ( float )
     - float_measurement_value: Valor da medição ( float )
     - str_insert_date: Data de cadastro ( str )
    
     """
-    def send_message_by_alert_humidity(self, str_sensor_name: str = None, str_location_name: str = None, float_location_max_humidity: float = 0.00, float_measurement_value: float = 0.00, str_insert_date: str = None)-> dict:
+    def send_message_by_alert_humidity(self, str_sensor_name: str = None, str_location_name: str = None, str_latitude: float = None, str_longitude: float = None, float_location_max_humidity: float = 0.00, float_measurement_value: float = 0.00, str_insert_date: str = None)-> dict:
 
         dict_return = {'status': True, 'dict_data': {}}
 
@@ -131,17 +133,31 @@ class Aws:
             if type(str_insert_date) == type(None) or type(str_insert_date) != str or str_insert_date.strip() == '':
                 self.exception('Não foi possível concluir o processo pois a data de cadastro não foi definida.')
 
+            str_message_location_name = f'"{str_location_name}"'
+            str_message_latitude = f'latitude {str_latitude}' if type(str_latitude) != type(None) and type(str_latitude) == str and str_latitude.strip() != '' else ''
+            str_message_longitude = f'longitude {str_longitude}' if type(str_longitude) != type(None) and type(str_longitude) == str and str_longitude.strip() != '' else ''
+
+            if str_message_latitude.strip() != '' or str_message_longitude.strip() != '':
+                str_message_location_name += f' ('
+                if str_message_latitude.strip() != '' and str_message_longitude.strip() != '':
+                    str_message_location_name += f'{str_message_latitude}, {str_message_longitude}'
+                elif str_message_latitude.strip() != '':
+                    str_message_location_name += f'{str_message_latitude}'
+                elif str_message_longitude.strip() != '':
+                    str_message_location_name += f'{str_message_longitude}'
+                str_message_location_name += f')'
+
             dict_params_request['str_subject'] = f'Alerta de possível instabilidade de solo'
             dict_params_request['str_message'] = f'''
 
-                Uma medição de umidade de solo foi cadastrada a partir do sensor "{str_sensor_name}" na localização "{str_location_name}" com o valor de {float_measurement_value}% em {str_insert_date}.
+                Uma medição de umidade de solo foi cadastrada a partir do sensor "{str_sensor_name}" na localização {str_message_location_name} com o valor de {float_measurement_value}% em {str_insert_date}.
 
-                De acordo com a configuração de umidade máxima para o solo dessa localização, a medição é superior ao máximo permitido ( {float_location_max_humidity}% ), podendo ocasionar as possíveis situações:
+                De acordo com a configuração de umidade máxima para o solo dessa localização, a medição é superior ao máximo permitido ({float_location_max_humidity}%), podendo ocasionar as possíveis situações:
 
                 - Perda de coesão entre as partículas: A água em excesso age como lubrificante entre os grãos do solo, diminuindo a força de atrito que os mantém unidos. Isso enfraquece a estrutura do solo.
                 - Aumento do peso do solo: A água acumulada no solo aumenta sua massa, o que pressiona camadas inferiores e pode provocar escorregamento - especialmente em terrenos inclinados.
                 - Pressão intersticial (ou poro-pressão) elevada: Quando os poros do solo se enchem de água, a pressão interna cresce e empurra as partículas umas contra as outras, reduzindo a resistência ao cisalhamento (força que mantém o solo coeso).
-                - Saturação e liquefação: Em casos extremos, o solo pode entrar em um estado de liquefação, comportando-se como um líquido em vez de um sólido — situação extremamente perigosa.
+                - Saturação e liquefação: Em casos extremos, o solo pode entrar em um estado de liquefação, comportando-se como um líquido em vez de um sólido - situação extremamente perigosa.
 
                 Dadas as situações acima, existem riscos diretos associados à instabilidade do solo, podendo causar:
 

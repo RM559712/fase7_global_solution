@@ -52,7 +52,19 @@ As imagens abaixo, retiradas do site https://disasterscharter.org/activations/la
 ![Recife - Jaboatão dos Guararapes](https://github.com/RM559712/fase7_global_solution/blob/main/assets/images/Recife_JaboataoDosGuararaoes-1.png)
 ![Recife - Jardim Monte Verde](https://github.com/RM559712/fase7_global_solution/blob/main/assets/images/Recife_JardimMonteVerde-1.png)
 
+#### Outros relatos
+
+Infelizmente, muitos outros episódios causaram tragédias em diversas regiões do Brasil, como em Angra dos Reis, localizado no estado do Rio de Janeiro, em abril de 2022.
+
+Por se tratarem de regiões sujeitas a esse tipo de evento, será que, se essas famílias tivessem acesso a um sistema que pudesse alertá-las sempre que a área estivesse chegando ao seu limite e correndo risco de deslizamentos, elas poderiam ter sido salvas? A resposta é: sim, acreditamos que isso seria possível. Para isso, um sistema simples e de baixo custo seria suficiente para ajudar não só a salvar todas essas vidas — o ponto principal da questão —, mas também para auxiliar as equipes de resgate e contenção a tomarem decisões que talvez evitassem os danos materiais causados à região.
+
 ### Projeto
+
+Este projeto foi desenvolvido utilizando itens de baixo custo, como sensores de umidade do solo com potenciômetro, além de um sistema simples de alertas comunitários voltado à atuação em áreas de risco.
+
+A proposta é permitir que regiões localizadas em áreas vulneráveis sejam cadastradas no sistema com base em coordenadas de latitude e longitude, configurando-se também um percentual máximo de umidade do solo considerado seguro. Por meio de sensores e leituras frequentes, torna-se possível monitorar o aumento progressivo da umidade nessas regiões. Caso, em determinado momento, o sistema identifique que o valor configurado foi ultrapassado, um alerta de segurança será enviado imediatamente a uma equipe responsável por auxiliar na evacuação da área.
+
+### Sistema
 
 
 
