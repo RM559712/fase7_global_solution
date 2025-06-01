@@ -77,6 +77,8 @@ Algumas informações sobre as funcionalidades do projeto:
     - <strong>Sensor de Umidade do solo (<i>simulação simples</i>)</strong>: Exemplo desenvolvido de forma simples para simular um sensor de umidade de solo. Pode ser visualizado e testado no seguinte endereço da plataforma Wokwi https://wokwi.com/projects/432226994150895617. O código otimizado está disponível em [código](https://github.com/RM559712/fase7_global_solution/tree/main/src/sensors/examples/humidity).
 - <strong>Módulo "Gráficos"</strong>: Permite a visualização de gráficos das medições cadastradas por localização;
 
+O componente responsável pelo envio do alerta utilizará o serviço da AWS. Para fins de validação, o método responsável pela ação acima pode ser visualizado clicando [aqui](https://github.com/RM559712/fase7_global_solution/tree/main/src/aws/lambda).
+
 ## 📁 Estrutura de pastas
 
 Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
