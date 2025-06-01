@@ -33,6 +33,8 @@ Grupo de número <b>4</b> formado pelos integrantes mencionados abaixo.
 
 Nos últimos anos, o Brasil enfrentou tragédias causadas por deslizamentos em encostas, provocados pelo solo excessivamente encharcado. Sabemos que é muito difícil evitar esses acidentes, pois a natureza é incontrolável e, devido às ações humanas, esses eventos estão se tornando cada vez mais imprevisíveis.
 
+As informações abaixo foram levantadas a partir do site https://disasterscharter.org.
+
 #### São Sebastião, fevereiro 2023
 
 Não precisamos voltar muito no tempo para nos lembrarmos dos eventos ocorridos na cidade de São Sebastião, litoral do estado de São Paulo, em fevereiro de 2023. Por conta da quantidade excessiva de chuvas — acumulando, em um único dia, a quantidade total esperada para todo o mês —, a cidade foi afetada por diversos alagamentos e deslizamentos nas encostas da região. Infelizmente, 64 moradores da Vila Sahy, bairro mais afetado pelos deslizamentos, perderam a vida, pois não tiveram tempo suficiente para abandonar a região em segurança.
@@ -65,6 +67,8 @@ Este projeto foi desenvolvido utilizando itens de baixo custo, como sensores de 
 A proposta é permitir que regiões localizadas em áreas vulneráveis sejam cadastradas no sistema com base em coordenadas de latitude e longitude, definindo também um percentual máximo de umidade do solo considerado seguro. Por meio de sensores e leituras frequentes, torna-se possível monitorar o aumento progressivo da umidade nessas regiões. Caso, em determinado momento, o sistema identifique que o limite configurado foi ultrapassado pelas leituras do sensor, um alerta de segurança será enviado imediatamente a uma equipe responsável por auxiliar na evacuação da área.
 
 ### Sistema
+
+Algumas informações sobre os módulos do sistema:
 
 
 
