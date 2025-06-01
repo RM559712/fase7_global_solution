@@ -62,7 +62,7 @@ Por se tratarem de regiões sujeitas a esse tipo de evento, será que, se essas 
 
 Este projeto foi desenvolvido utilizando itens de baixo custo, como sensores de umidade do solo com potenciômetro, além de um sistema simples de alertas comunitários voltado à atuação em áreas de risco.
 
-A proposta é permitir que regiões localizadas em áreas vulneráveis sejam cadastradas no sistema com base em coordenadas de latitude e longitude, configurando-se também um percentual máximo de umidade do solo considerado seguro. Por meio de sensores e leituras frequentes, torna-se possível monitorar o aumento progressivo da umidade nessas regiões. Caso, em determinado momento, o sistema identifique que o valor configurado foi ultrapassado, um alerta de segurança será enviado imediatamente a uma equipe responsável por auxiliar na evacuação da área.
+A proposta é permitir que regiões localizadas em áreas vulneráveis sejam cadastradas no sistema com base em coordenadas de latitude e longitude, definindo também um percentual máximo de umidade do solo considerado seguro. Por meio de sensores e leituras frequentes, torna-se possível monitorar o aumento progressivo da umidade nessas regiões. Caso, em determinado momento, o sistema identifique que o limite configurado foi ultrapassado pelas leituras do sensor, um alerta de segurança será enviado imediatamente a uma equipe responsável por auxiliar na evacuação da área.
 
 ### Sistema
 
