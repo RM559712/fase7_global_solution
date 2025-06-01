@@ -39,13 +39,18 @@ Não precisamos voltar muito no tempo para nos lembrarmos dos eventos ocorridos 
 
 As imagens abaixo, retiradas do site https://disasterscharter.org/activations/landslide-in-brazil-activation-803-, mostram como essas regiões foram afetadas com os deslizamentos.
 
-![São Sebastião - Vila Sahy](https://github.com/RM559712/fase7_global_solution/blob/main/assets/images/SaoSebastiao_BarraSahy-1.png)
-![São Sebastião - Vila Sahy](https://github.com/RM559712/fase7_global_solution/blob/main/assets/images/SaoSebastiao_BarraSahy-2.png)
-![São Sebastião - Vila Sahy](https://github.com/RM559712/fase7_global_solution/blob/main/assets/images/SaoSebastiao_BarraSahy-3.png)
+![São Sebastião - Barra Sahy](https://github.com/RM559712/fase7_global_solution/blob/main/assets/images/SaoSebastiao_BarraSahy-1.png)
+![São Sebastião - Barra Sahy](https://github.com/RM559712/fase7_global_solution/blob/main/assets/images/SaoSebastiao_BarraSahy-2.png)
+![São Sebastião - Barra Sahy](https://github.com/RM559712/fase7_global_solution/blob/main/assets/images/SaoSebastiao_BarraSahy-3.png)
 
 #### Recife, junho de 2022
 
-Pouco menos de um ano antes dos eventos acima, a região
+Pouco menos de um ano antes dos eventos acima, um bairro localizado na região metropolitana de Recife, chamado Jardim Monte Verde e localizado na divisa entre Recife e Jaboatão dos Guararapes, também acumulou em um único dia um volume que superou a média histórica mensal para o período, causando diversos alagamentos e deslizamentos. Sendo a região mais atingida, causou 44 vítimas fatais, além de desabrigar diversas famílias que habitavam a região.
+
+As imagens abaixo, retiradas do site https://disasterscharter.org/activations/landslide-in-brazil-activation-758-, mostram como essas regiões foram afetadas com os deslizamentos.
+
+![Recife - Jaboatão dos Guararapes](https://github.com/RM559712/fase7_global_solution/blob/main/assets/images/Recife_JaboataoDosGuararaoes-1.png)
+![Recife - Jardim Monte Verde](https://github.com/RM559712/fase7_global_solution/blob/main/assets/images/Recife_JardimMonteVerde-1.png)
 
 ### Projeto
 
