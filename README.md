@@ -45,7 +45,7 @@ As imagens abaixo, retiradas do site https://disasterscharter.org/activations/la
 
 #### Recife, junho de 2022
 
-Pouco menos de um ano antes dos eventos acima, um bairro localizado na região metropolitana de Recife, chamado Jardim Monte Verde e localizado na divisa entre Recife e Jaboatão dos Guararapes, também acumulou em um único dia um volume que superou a média histórica mensal para o período, causando diversos alagamentos e deslizamentos. Sendo a região mais atingida, causou 44 vítimas fatais, além de desabrigar diversas famílias que habitavam a região.
+Pouco menos de um ano antes dos eventos mencionados, um bairro da Região Metropolitana do Recife, chamado Jardim Monte Verde — localizado na divisa entre Recife e Jaboatão dos Guararapes —, também registrou, em um único dia, um volume de chuvas que superou a média histórica mensal para o período, provocando diversos alagamentos e deslizamentos. Sendo a região mais atingida, o episódio causou 44 mortes e deixou várias famílias desabrigadas.
 
 As imagens abaixo, retiradas do site https://disasterscharter.org/activations/landslide-in-brazil-activation-758-, mostram como essas regiões foram afetadas com os deslizamentos.
 
