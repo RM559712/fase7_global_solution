@@ -33,7 +33,7 @@ Grupo de número <b>4</b> formado pelos integrantes mencionados abaixo.
 
 Nos últimos anos, o Brasil enfrentou tragédias causadas por deslizamentos em encostas, provocados pelo solo excessivamente encharcado. Sabemos que é muito difícil evitar esses acidentes, pois a natureza é incontrolável e, devido às ações humanas, esses eventos estão se tornando cada vez mais imprevisíveis.
 
-As informações abaixo foram levantadas a partir do site https://disasterscharter.org.
+As informações abaixo foram levantadas a partir do site https://disasterscharter.org, mais precisamente direcionado à [deslizamentos ocorridos no Brasil](https://disasterscharter.org/activations?location=Brazil&disaster=landslide).
 
 #### São Sebastião, fevereiro 2023
 
