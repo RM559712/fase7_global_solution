@@ -29,7 +29,7 @@ Grupo de número <b>4</b> formado pelos integrantes mencionados abaixo.
 
 <b>Referência</b>: https://on.fiap.com.br/mod/assign/view.php?id=491867&c=13085
 
-### Problema
+> ### Problema
 
 Nos últimos anos, o Brasil enfrentou tragédias causadas por deslizamentos em encostas, provocados pelo solo excessivamente encharcado. Sabemos que é muito difícil evitar esses acidentes, pois a natureza é incontrolável e, devido às ações humanas, esses eventos estão se tornando cada vez mais imprevisíveis.
 
@@ -60,13 +60,13 @@ Infelizmente, muitos outros episódios causaram tragédias em diversas regiões 
 
 Por se tratarem de regiões sujeitas a esse tipo de evento, será que, se essas famílias tivessem acesso a um sistema capaz de alertá-las sempre que a área estivesse se aproximando do seu limite e correndo risco de deslizamentos, elas poderiam ter sido salvas? A resposta é: sim, acreditamos que isso seria possível. Para tanto, um sistema simples e de baixo custo seria suficiente para ajudar não apenas a salvar todas essas vidas — o ponto principal da questão —, mas também para auxiliar as equipes de resgate e contenção a tomarem decisões que, talvez, evitassem os danos materiais causados à região.
 
-### Solução
+> ### Solução
 
 Este projeto foi desenvolvido utilizando itens de baixo custo, como sensores de umidade do solo com potenciômetro, além de um sistema simples de alertas comunitários voltado à atuação em áreas de risco.
 
 A proposta é permitir que regiões localizadas em áreas vulneráveis sejam cadastradas no sistema com base em coordenadas de latitude e longitude, definindo também um percentual máximo de umidade do solo considerado seguro. Por meio de sensores e leituras frequentes, torna-se possível monitorar o aumento progressivo da umidade nessas regiões. Caso, em determinado momento, o sistema identifique que o limite configurado foi ultrapassado pelas leituras do sensor, um alerta de segurança será enviado imediatamente a uma equipe responsável por auxiliar na evacuação da área.
 
-### Projeto
+> ### Projeto
 
 Algumas informações sobre as funcionalidades do projeto:
 
