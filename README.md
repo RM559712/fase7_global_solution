@@ -104,11 +104,6 @@ Como se trata de uma versão em formato <i>prompt</i>, para execução das funci
 1. Utilizando algum editor de código compatível com a linguagem de programação Python (<i>VsCode, PyCharm, etc.</i>), acesse o diretório "./src/prompt".
 2. Neste diretório, basta abrir o arquivo "main.py" e executá-lo.
 
-Alguns módulos do sistema podem ser executados em formato <i>web</i> utilizando Streamlit conforme descritos em [Descrição](https://github.com/RM559712/fase4_cap1?tab=readme-ov-file#-descri%C3%A7%C3%A3o). Para acessá-los, os seguintes passos devem ser seguidos:
-
-1. Utilizando algum editor de código compatível com a linguagem de programação Python (<i>VsCode, PyCharm, etc.</i>), acesse o diretório "./src/web/modules/{nome_do_modulo}".
-2. Neste diretório, basta identificar o arquivo desejado e executar o comando `streamlit run {nome_do_arquivo}.py`.
-
 Para essa versão não são solicitados parâmetros para acesso como por exemplo <i>username</i>, <i>password</i>, <i>token access</i>, etc.
 
 ## 🗃 Histórico de lançamentos
