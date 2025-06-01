@@ -101,7 +101,7 @@ def get_system_menu_options() -> list:
     return [
         {
             'code': 1,
-            'title': 'Localização',
+            'title': 'Localizações',
             'action': ModuleLocation.action_main
         },{
             'code': 2,
@@ -213,7 +213,7 @@ def init_system():
 
 
 # ---------------------------------------------------------------------------------------------------------------
-# Métodos referentes a opção "Localização"
+# Métodos referentes a opção "Localizações"
 # ---------------------------------------------------------------------------------------------------------------
 
 import prompt.modules.location as ModuleLocation

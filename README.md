@@ -70,7 +70,10 @@ A proposta é permitir que regiões localizadas em áreas vulneráveis sejam cad
 
 Algumas informações sobre os módulos do sistema:
 
-
+- <strong>Módulo "Localizações"</strong>: permite o cadastro das áreas que deverão ser monitoradas, como encostas, serras, morros ou qualquer outro tipo de terreno. A partir dos parâmetros de latitude e longitude, é possível gerenciar a região e fornecer informações que agilizem a tomada de decisões. Além disso, com a definição de um percentual máximo de umidade do solo, podem ser estabelecidas regras para a prevenção de deslizamentos ou outros acidentes geológicos.
+- <strong>Módulo "Sensores"</strong>: Permite que sejam cadastrados diferentes sensores com seus códigos de série e associados ao tipo "Sensor de Umidade do solo".
+- <strong>Módulo "Medições"</strong>: Permite o cadastro de medições utilizando como parâmetros o ID da localização onde a medição foi realizada (conforme cadastro no módulo "Localizações"), o ID do sensor utilizado (conforme cadastro no módulo "Sensores") e o valor da medição. Ao final do processo, caso o valor registrado ultrapasse o percentual máximo de umidade do solo definido para a região, um alerta será enviado imediatamente, com o objetivo de auxiliar na tomada de decisões.
+- <strong>Módulo "Gráficos"</strong>: Permite a visualização de gráficos das medições cadastradas por localização;
 
 ## 📁 Estrutura de pastas
 
