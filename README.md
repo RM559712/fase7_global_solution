@@ -74,6 +74,8 @@ Algumas informações sobre os módulos do sistema:
 - <strong>Módulo "Sensores"</strong>: Permite que sejam cadastrados diferentes sensores com seus códigos de série e associados ao tipo "Sensor de Umidade do solo".
 - <strong>Módulo "Medições"</strong>: Permite o cadastro de medições utilizando como parâmetros o ID da localização onde a medição foi realizada (conforme cadastro no módulo "Localizações"), o ID do sensor utilizado (conforme cadastro no módulo "Sensores") e o valor da medição. Ao final do processo, caso o valor registrado ultrapasse o percentual máximo de umidade do solo definido para a região, um alerta será enviado imediatamente, com o objetivo de auxiliar na tomada de decisões. Esse módulo atua em paralelo com o serviço utilizado pelo sensor (API), responsável pelo armazenamento dos registros conforme a frequência de medição configurada.
 - <strong>Módulo "Gráficos"</strong>: Permite a visualização de gráficos das medições cadastradas por localização;
+- <strong>Execução dos sensores</strong>: Permite que os sensores sejam simulados, de modo que suas respectivas medições sejam exibidas.
+    - <strong>Sensor de Umidade do solo (<i>simulação simples</i>)</strong>: Exemplo desenvolvido de forma simples para simular um sensor de umidade de solo. Pode ser visualizado e testado no seguinte endereço da plataforma Wokwi https://wokwi.com/projects/432226994150895617. O código otimizado está disponível em [código](https://github.com/RM559712/fase7_global_solution/tree/main/src/sensors/examples/humidity).
 
 ## 📁 Estrutura de pastas
 
